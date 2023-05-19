@@ -6,8 +6,17 @@
           box-sizing: border-box;
 }
 
-body, p, h1 {
+body, p, h1, h3 {
   margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .content {
@@ -125,4 +134,133 @@ body, p, h1 {
   left: -70px;
   top: -10px;
   background-image: url(img/free.png);
+}
+
+/* main */
+
+/* part 1 */
+.part1 {
+  background: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 150px 156px;
+}
+
+.bestseller {
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #999999;
+}
+
+.line {
+  width: 50px;
+  height: 2px;
+  background: #10A196;
+  margin: 25px 0 27px 0;
+}
+
+.title1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: #00312D;
+}
+.titleMark {
+  color: #10A196;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 387px;
+  height: 626px;
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  position: relative;
+}
+.product:after {
+  content: 'Bestseller';
+  top: -13px;
+  position: absolute;
+  width: 116px;
+  height: 26px;
+  background: #FFC700;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.productImage {
+  background: linear-gradient(180deg, #FAFAFA 0%, rgba(250, 250, 250, 0) 100%);
+  padding: 48px 96px 31px 98px;
+}
+
+.productTitle {
+  font-weight: 600;
+  font-size: 24px;
+  color: #00312D;
+  margin-top: 16px;
+}
+
+.productDesc {
+  font-weight: 500;
+  font-size: 12px;
+  color: #808080;
+}
+
+.productPrice {
+  font-weight: 600;
+  font-size: 20px;
+  color: #00312D;
+  margin: 26px 0 4px 0;
+}
+
+.productNote {
+  font-weight: 500;
+  font-size: 8px;
+  color: #808080;
+}
+
+.productActions {
+  display: flex;
+  justify-content: right;
+  padding: 23px 21px 21px 21px;
+  width: 100%;
+}
+
+.productBtn {
+  width: 100%;
+  max-width: 285px;
+  height: 50px;
+  background: #10A196;
+  border-radius: 3px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.productBtn:after {
+  content: '';
+  position: absolute;
+  background-image: url(img/basket.png);
+  width: 50px;
+  height: 50px;
+  left: -60px;
+  top: 0;
+  cursor: pointer;
 }
