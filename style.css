@@ -6,7 +6,7 @@
           box-sizing: border-box;
 }
 
-body, p, h1, h3 {
+body, p, h1, h2, h3 {
   margin: 0;
 }
 
@@ -263,4 +263,66 @@ button {
   left: -60px;
   top: 0;
   cursor: pointer;
+}
+
+/* part 2 */
+.part2 {
+  display: flex;
+  position: relative;
+  padding: 186px 0 274px 362px;
+}
+
+.title2 {
+  position: relative;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 98px;
+  text-transform: uppercase;
+  color: #00312D;
+}
+
+.ampersand {
+  top: 64px;
+  left: 278px;
+  position: absolute;
+  color: #E9E000;
+}
+
+.titleSpan {
+  margin-left: 355px;
+  color: #10A196;
+}
+
+.part2desc {
+  margin: 50px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 527px;
+}
+
+.pictureContainer {
+  background-image: url(img/ellipse.png);
+  width: 600px;
+  height: 600px;
+  margin-left: -90px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: -2;
+}
+
+.productPicture {
+  width: 267.66px;
+  height: 415.52px;
+  transform: matrix(0.97, 0.26, -0.26, 0.97, 0, 0);
+}
+
+.extraPicture {
+  position: absolute;
+  top: 430px;
+  left: 364px;
+  transform: rotate(15deg);
 }
