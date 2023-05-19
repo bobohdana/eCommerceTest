@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, p, h1 {
+  margin: 0;
+}
+
+.content {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.commonPadding {
+  padding: 0 349px 0 360px;
+}
+
+/* header */
+.features {
+  background-color: #00312D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.featureTop {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.95);
+}
+.featureTop:after {
+  content: '';
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: -32px;
+  background-image: url(img/tick.png);
+}
+
+.headerCenter {
+  height: 700px;
+  background-image: url(img/mask.jpg);
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  padding-left: 360px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 30px 0 50px 0;
+}
+
+.buyBtn {
+  width: 260px;
+  height: 65px;
+  background: #00312D;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.pictures {
+  position: relative;
+  top: 75px;
+  left: -75px;
+}
+
+.mainPic {
+  position: relative;
+  z-index: 2;
+}
+
+.mark1 {
+  position: absolute;
+  left: 30px;
+  top: 270px; 
+}
+.mark2 {
+  position: absolute;
+  right: 110px;
+  top: 100px;
+}
+.mark3 {
+  position: absolute;
+  left: 240px;
+  top: 410px;
+  z-index: 3;
+}
+
+.bottom {
+  height: 150px;
+}
+
+.featureBottom {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.featureBottom:after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: -70px;
+  top: -10px;
+  background-image: url(img/free.png);
+}
