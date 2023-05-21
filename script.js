@@ -50,10 +50,11 @@ productsData.forEach((product) => {
   productContainer.classList.add('product')
 
   const div = document.createElement('div')
-  div.classList.add('productImage')
+  div.classList.add('productImgRoot')
   const img = document.createElement('img')
   img.src = product.img
   img.alt = ''
+  img.classList.add('productImg')
   div.appendChild(img)
   productContainer.appendChild(div)
 
@@ -143,6 +144,7 @@ const reviews = [
   },
 ]
 const reviewsContainer = document.querySelector('.reviews')
+const slider = document.querySelector('.slider')
 const arrowLeft = document.querySelector('.arrowLeft')
 const arrowRight = document.querySelector('.arrowRight')
 
@@ -174,26 +176,55 @@ reviews.forEach(review => {
 
 const reviewWidth = document.querySelector('.review').offsetWidth
 const margin = 20
-let currentLeft = document.documentElement.clientWidth * 0.5
+let currentLeft = slider.offsetWidth * 0.5
+let currentReview = Math.floor(reviews.length / 2)
 
 arrowLeft.addEventListener('click', () => {
+  currentReview -= 1
   arrowLeft.classList.remove('hidden')
   arrowRight.classList.remove('hidden')
   currentLeft = currentLeft + reviewWidth + margin
   reviewsContainer.style.left = currentLeft + 'px'
-  if (document.documentElement.clientWidth - (reviewWidth + margin) < currentLeft) {
+  if (!currentReview) {
     arrowLeft.classList.add('hidden')
   }
 })
 
 arrowRight.addEventListener('click', () => {
+  currentReview += 1
   arrowRight.classList.remove('hidden')
   arrowLeft.classList.remove('hidden')
   currentLeft = currentLeft - reviewWidth - margin
   reviewsContainer.style.left = currentLeft + 'px'
-  if (currentLeft / (reviewWidth + margin) < 1) {
+  if (currentReview === reviews.length - 1) {
     arrowRight.classList.add('hidden')
   }
+})
+const initialDot = Math.floor(reviews.length / 2)
+const dotsRoot = document.querySelector('.dots')
+
+reviews.forEach((e, index) => {
+  const dot = document.createElement('div')
+  dot.classList.add('dot')
+  if (index === initialDot) {
+    dot.classList.add('dotVisible')
+  }
+  dotsRoot.appendChild(dot)
+})
+
+const dots = document.querySelectorAll('.dot')
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    dot.classList.add('dotVisible')
+    dots.forEach((dot, i) => {
+      if (i != index) {
+        dot.classList.remove('dotVisible')
+      }
+    })
+    const left = currentLeft - (index - initialDot) * (reviewWidth + margin)
+    reviewsContainer.style.left = left + 'px'
+  })
 })
 
 // footer

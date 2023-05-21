@@ -46,7 +46,7 @@ button {
 }
 
 .commonPadding {
-  padding: 0 349px 0 360px;
+  padding: 0 18% 0 19%;
 }
 
 /* header */
@@ -80,14 +80,18 @@ button {
   display: flex;
   align-items: center;
   color: #FFFFFF;
-  padding-left: 360px;
+  padding-left: 19%;
 }
 
 .title {
   font-weight: 700;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 70px;
   text-transform: uppercase;
+}
+
+.brNew {
+  display: none;
 }
 
 .subtitle {
@@ -136,13 +140,14 @@ button {
 }
 
 .bottom {
-  height: 150px;
+  height: 150px !important;
+  justify-content: space-between !important;
 }
 
 .featureBottom {
   position: relative;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   color: #FFFFFF;
 }
@@ -167,7 +172,7 @@ button {
 
 /* part 1 */
 .part1 {
-  padding: 150px 156px;
+  padding: 150px 8rem;
 }
 
 .bestseller {
@@ -187,7 +192,7 @@ button {
 
 .title1 {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 40px;
   color: #00312D;
 }
@@ -208,10 +213,11 @@ button {
   align-items: center;
   width: 100%;
   max-width: 387px;
-  height: 626px;
   background: #FFFFFF;
   border: 1px solid #E6E6E6;
   position: relative;
+  margin: 0 10px;
+  padding: 0 10px;
 }
 .product:after {
   content: 'Bestseller';
@@ -228,41 +234,42 @@ button {
   text-align: center;
 }
 
-.productImage {
+.productImgRoot {
   background: linear-gradient(180deg, #FAFAFA 0%, rgba(250, 250, 250, 0) 100%);
-  padding: 48px 96px 31px 98px;
+  padding: 12.4% 24.8% 8% 25.3%;
 }
 
 .productTitle {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #00312D;
   margin-top: 16px;
 }
 
 .productDesc {
   font-weight: 500;
-  font-size: 12px;
+  font-size: .75rem;
   color: #808080;
+  text-align: center;
 }
 
 .productPrice {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #00312D;
-  margin: 26px 0 4px 0;
+  margin: 1.5rem 0 4px 0;
 }
 
 .productNote {
   font-weight: 500;
-  font-size: 8px;
+  font-size: .5rem;
   color: #808080;
 }
 
 .productActions {
   display: flex;
   justify-content: right;
-  padding: 23px 21px 21px 21px;
+  padding: 23px 5.4% 21px 5.4%;
   width: 100%;
 }
 
@@ -275,6 +282,8 @@ button {
   color: #FFFFFF;
   text-transform: uppercase;
   position: relative;
+  margin-left: 60px;
+  font-size: .875rem;
 }
 
 .productBtn:after {
@@ -292,16 +301,16 @@ button {
 .part2 {
   display: flex;
   position: relative;
-  padding: 186px 0 274px 362px;
+  padding: 186px 0 274px 19%;
 }
 
 .title2 {
   position: relative;
   font-weight: 700;
-  font-size: 100px;
-  line-height: 98px;
+  font-size: 6.25rem;
   text-transform: uppercase;
   color: #00312D;
+  line-height: 98px;
 }
 
 .ampersand {
@@ -321,20 +330,20 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  max-width: 527px;
+  max-width: 33rem;
 }
 
 .pictureContainer {
   background-image: url(img/ellipse.png);
   width: 600px;
   height: 600px;
-  margin-left: -90px;
   margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: -2;
+  margin-left: -90px;
 }
 
 .productPicture {
@@ -465,7 +474,7 @@ button {
   left: 0;
   background: #FAFAFA;
   border-radius: 0px 1000px 1000px 0px;
-  width: 1446px;
+  width: 75.3%;
   height: 947px;
 }
 
@@ -475,7 +484,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 947px;
   padding-top: 127px;
 }
 
@@ -486,7 +494,7 @@ button {
 }
 
 .mainAvatarRoot {
-  margin-left: 242px;
+  margin-left: 12.6%;
   margin-top: 30px;
   position: relative;
 }
@@ -512,7 +520,7 @@ button {
 
 /* footer */
 .footerTop {
-  padding: 151px 360px 145px 360px;
+  padding: 151px 19% 145px 19%;
   background-image: url(img/footerBack.jpg);
 }
 
@@ -531,13 +539,13 @@ button {
 
 .number {
   font-weight: 600;
-  font-size: 70px;
+  font-size: 4.375rem;
   color: #10A196;
 }
 
 .numberText {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #FFFFFF;
   margin-top: -10px;
 }
@@ -642,4 +650,40 @@ button {
   width: 38.14px;
   height: 24px;
   margin-left: 10px;
+}
+
+.footer2 {
+  display: none;
+  height: 40px;
+  background: #D9D9D9;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer2Text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 46px;
+  color: #000000;
+}
+
+.dots {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #10A196;
+  opacity: 0.2;
+  margin: 0 15px;
+}
+
+.dotVisible {
+  opacity: 1;
 }

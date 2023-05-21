@@ -5,19 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
   <title>eCommerce Test</title>
 </head>
 <body>
   <header class="content">
     <div class="features commonPadding">
-      <p class="featureTop">Versandkostenfrei ab XY €</p>
+      <p class="featureTop featureTopHidden">Versandkostenfrei ab XY €</p>
       <p class="featureTop">Lorem ipsum USP 2</p>
-      <p class="featureTop">30 Tage Geld-Zurück-Garantie</p>
+      <p class="featureTop featureTopHidden">30 Tage Geld-Zurück-Garantie</p>
     </div>
 
     <div class="headerCenter">
-      <div>
-        <h1 class="title">Mehr Power <br> mit uralter <br> Pflanzenkraft</h1>
+      <div class="headerText">
+        <h1 class="title">Mehr Power <br class="brOld"> mit <br class="brNew"> uralter <br class="brOld"> Pflanzenkraft</h1>
         <p class="subtitle">Einzigartige Pflanzenmischungen für Körper, <br/> Seele & Geist, direkt aus der Natur zu.</p>
         <button class="buyBtn">SHOP NOW</button>
       </div>
@@ -49,7 +50,7 @@
         <p class="part2desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
           <br> <br>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.</p>
-        <button class="buyBtn">SHOP NOW</button>
+        <button class="buyBtn buyBtnHidden">SHOP NOW</button>
       </div>
 
       <div class="pictureContainer">
@@ -68,6 +69,7 @@
       <div class="slider">
         <div class="reviews"></div>
 
+        <div class="dots"></div>
         <button class="arrowLeft"><img src="img/arrowLeft.png" alt=""></button>
         <button class="arrowRight"><img src="img/arrowRight.png" alt=""></button>
       </div>
@@ -81,7 +83,7 @@
         <h3 class="title1">Unsere <span class="titleMark">Story</span></h3>
 
         <div class="part4Main">
-          <div>
+          <div class="part4Text">
             <p class="part2desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
               <br> <br>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.</p>
@@ -90,7 +92,7 @@
 
           <div class="mainAvatarRoot">
             <div class="mainAvatar">
-              <img src="img/mainAvatar.png" alt="">
+              <img class="mainAvatarImg" src="img/mainAvatar.png" alt="">
             </div>
           </div>
         </div>
@@ -98,7 +100,7 @@
     </div>
   </main>
 
-  <footer class="content">
+  <footer class="content footer1">
     <div class="footerTop">
       <div class="numbers">
         <div class="numberRoot">
@@ -153,6 +155,12 @@
         <img class="payment" src="img/applePay.png" alt="">
       </div>
     </div>
+  </footer>
+
+  <footer class="content footer2">
+    <p class="footer2Text">Please use the desktop 
+      footer as inspiration for the
+      mobile footer</p>
   </footer>
 
   <script type="module" src="script.js"></script>

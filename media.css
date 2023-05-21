@@ -1,0 +1,423 @@
+@media all and (max-width: 1700px) {
+  .headerCenter {
+    padding-left: 12%;
+  }
+}
+
+@media all and (max-width: 1530px) {
+  .headerCenter {
+    padding-left: 6%;
+  }
+  .pictureContainer {
+    margin-left: -190px;
+  }
+}
+
+@media all and (max-width: 1430px) {
+  html {
+    font-size: 12px;
+  }
+  .headerCenter {
+    padding-left: 8%;
+  }
+
+  .title2 {
+    line-height: 74px;
+  }
+  .ampersand {
+    top: 48px;
+    left: 208px;
+  }
+  .titleSpan {
+    margin-left: 267px;
+  }
+}
+
+@media all and (max-width: 1240px) {
+  html {
+    font-size: 10px;
+  }
+
+  .features {
+    height: 40px;
+    justify-content: center;
+  }
+  .featureTopHidden {
+    display: none;
+  }
+
+  .headerCenter {
+    padding-left: 8%;
+    flex-direction: column-reverse;
+  }
+
+  .headerText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .title {
+    text-align: center;
+    text-transform: none;
+  }
+  .brNew {
+    display: inline;
+  }
+  .brOld {
+    display: none;
+  }
+
+  .subtitle {
+    margin: 15px 0 22px 0;
+  }
+
+  .mainPic {
+    width: 510px;
+    margin-right: -200px;
+    z-index: 0;
+  }
+
+  .mark1 {
+    left: 0px;
+    top: 200px;
+    width: 120px;
+  }
+  .mark2 {
+    right: -160px;
+    width: 180px;
+    top: 100px;
+  }
+  .mark3 {
+    display: none;
+  }
+
+  .products {
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .product {
+    width: 46%;
+    margin: 20px 10px;
+  }
+
+  .part2 {
+    padding: 111px 0 49px 0;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .pictureContainer {
+    margin-left: 0;
+  }
+  
+  .title2 {
+    line-height: 74px;
+    margin-top: 38px;
+    text-align: center;
+  }
+  .ampersand {
+    top: 54px;
+    left: 288px;
+  }
+  .titleSpan {
+    margin-left: 187px;
+  }
+
+  .part2desc {
+    margin: 30px 0;
+    max-width: 700px;
+  }
+
+  .part4 {
+    padding: 0;
+  }
+
+  .background {
+    display: none;
+  }
+
+  .part4Content {
+    padding-top: 520px;
+  }
+
+  .part4Main {
+    margin: 30px 0 50px 0;
+  }
+
+  .mainAvatarRoot {
+    position: absolute;
+    top: 50px;
+    margin: 0;
+  }
+
+  .footerTop {
+    padding: 151px 9% 145px 9%;
+  }
+}
+
+@media all and (max-width: 950px) {
+  .bottom {
+    height: 194px !important;
+  }
+
+  .featureBottom {
+    margin: 40px 10px 0 10px;
+  }
+  .featureBottom:after {
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .product {
+    width: 44%;
+  }
+
+  .productImg {
+    width: 150px;
+  }
+
+  .productBtn {
+    margin-left: 0;
+    height: 40px;
+    margin-bottom: 50px;
+  }
+
+  .productBtn:after {
+    content: url(img/baskett.png);
+    width: 100%;
+    height: 40px;
+    top: 45px;
+    left: 0;
+    background: #00312D;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .part2 {
+    padding: 40px 20px;
+  }
+
+  .pictureContainer {
+    width: 450px;
+    height: 450px;
+    background-size: contain;
+  }
+
+  .productPicture {
+    width: 200px;
+    height: 310px;
+  }
+  .extraPicture {
+    top: 270px;
+    left: 304px;
+  }
+
+  .buyBtnHidden {
+    display: none;
+  }
+
+  .ampersand {
+    position: unset;
+    margin-left: 150px;
+  }
+
+  .titleSpan {
+    margin-left: 0;
+  }
+
+  .part4Content {
+    padding-top: 520px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer1 {
+    display: none;
+  }
+
+  .footer2 {
+    display: flex;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .productImg {
+    width: 110px;
+  }
+}
+
+@media all and (max-width: 650px) {
+  html {
+    font-size: 6px;
+  }
+
+  .arrowRight, .arrowLeft {
+    display: none;
+  }
+
+  .slider {
+    width: 400px;
+    height: 446px;
+  }
+  .slider::after, .slider::before {
+    visibility: hidden;
+  }
+
+  .headerCenter {
+    padding: 0 10px;
+    background-position-x: -40%;
+  }
+
+  .title {
+    line-height: normal;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .pictures {
+    left: -55px;
+    top: 15px;
+  }
+
+  .mainPic {
+    width: 510px;
+    margin-right: -200px;
+    z-index: 0;
+  }
+
+  .mark1 {
+    left: 20px;
+    top: 200px;
+    width: 100px;
+  }
+  .mark2 {
+    width: 180px;
+  }
+
+  .commonPadding {
+    padding: 0 8% 0 9%;
+  }
+
+  .part1 {
+    padding: 50px 10px;
+  }
+
+  .line {
+    margin: 20px 0 17px 0;
+  }
+
+  .title1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .product {
+    width: 46%;
+    margin: 10px 5px;
+  }
+
+  .productImg {
+    width: 77px;
+  }
+  .productBtn, .productDesc {
+    font-size: 12px;
+  }
+  .productTitle {
+    font-size: 18px;
+  }
+  .productPrice {
+    font-size: 20px;
+  }
+  .productNote {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .pictureContainer {
+    width: 305px;
+    height: 305px;
+  }
+
+  .productPicture {
+    width: 130px;
+    height: 210px;
+  }
+  .extraPicture {
+    width: 110px;
+    top: 200px;
+    left: 204px;
+  }
+
+  .title2 {
+    line-height: 34px;
+    text-align: start;
+  }
+
+  .part3 {
+    padding: 50px 10px;
+  }
+
+  .avatars {
+    margin: 20px 0 50px 0;
+  }
+
+  .review {
+    width: 320px;
+    padding: 30px;
+  }
+
+  .reviewName {
+    font-size: 18px;
+  }
+  .reviewText {
+    font-size: 15px;
+  }
+
+  .mainAvatarRoot:before {
+    width: 160px;
+    height: 160px;
+    right: -30px;
+  }
+  
+  .mainAvatar, .mainAvatarImg {
+    width: 250px;
+    height: 250px;
+  }
+
+  .part4Content {
+    padding-top: 350px;
+  }
+
+  .part4Main {
+    margin: 10px 0 50px 0;
+  }
+  .part4Text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .part2desc {
+    margin: 10px 0 30px 0;
+    text-align: center;
+  }
+
+  .footer2 {
+    height: 661px;
+    padding: 0 71px;
+  }
+
+  .dots {
+    display: flex;
+  }
+}
