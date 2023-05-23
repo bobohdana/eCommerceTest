@@ -77,12 +77,12 @@ button {
   line-height: 21px;
   color: rgba(255, 255, 255, 0.95);
 }
-.featureTop:after {
+.featureTop:before {
   content: '';
   width: 22px;
   height: 22px;
   position: absolute;
-  left: -32px;
+  margin-left: -32px;
   background-image: url(img/tick.png);
 }
 

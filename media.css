@@ -66,12 +66,13 @@
     position: absolute;
     left: 0;
     width: unset;
-    margin-left: 30px;
   }
 
   .featureTop {
-    width: 250px;
+    width: 260px;
+    text-align: center;
     margin: 0 10px;
+    padding-left: 32px;
   }
 
   .firstFeature, .lastFeature {
