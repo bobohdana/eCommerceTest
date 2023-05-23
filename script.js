@@ -200,7 +200,9 @@ arrowRight.addEventListener('click', () => {
     arrowRight.classList.add('hidden')
   }
 })
-const initialDot = Math.floor(reviews.length / 2)
+
+const initialDot = 0
+let currentDot = initialDot
 const dotsRoot = document.querySelector('.dots')
 
 reviews.forEach((e, index) => {
@@ -216,20 +218,144 @@ const dots = document.querySelectorAll('.dot')
 
 dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
+    currentDot = index
     dot.classList.add('dotVisible')
     dots.forEach((dot, i) => {
       if (i != index) {
         dot.classList.remove('dotVisible')
       }
     })
-    const left = currentLeft - (index - initialDot) * (reviewWidth + margin)
+    const left = 0 - (index - initialDot) * (reviewWidth + margin)
     reviewsContainer.style.left = left + 'px'
   })
 })
 
+const trfRegExp = /[-0-9.]+(?=px)/
+const posThreshold = reviewWidth * .35
+let posInit, posX1, posX2
+const getEvent = () => event.type.search('touch') !== -1 ? event.touches[0] : event
+const swipeStart = () => {
+  let evt = getEvent()
+  posInit = posX1 = evt.clientX
+  reviewsContainer.style.transition = ''
+
+  document.addEventListener('touchmove', swipeAction)
+  document.addEventListener('touchend', swipeEnd)
+}
+
+const swipeAction = () => {
+  let evt = getEvent()
+  let style = reviewsContainer.style.left
+  const transform = +style.match(trfRegExp)[0]
+
+  posX2 = posX1 - evt.clientX
+  posX1 = evt.clientX
+
+  reviewsContainer.style.left = `${transform - posX2}px`
+}
+
+const swipeEnd = function() {
+  const posFinal = posInit - posX1;
+
+  document.removeEventListener('touchmove', swipeAction);
+
+  if (Math.abs(posFinal) > posThreshold) {
+    if (posInit < posX1 && currentDot != 0) {
+      currentDot--
+    } else if (posInit > posX1 && currentDot < reviews.length - 1) {
+      currentDot++
+    }
+  }
+
+  if (posInit !== posX1) {
+    reviewsContainer.style.transition = 'left .5s';
+    reviewsContainer.style.left = `-${currentDot * (reviewWidth + margin)}px`;
+    dots[currentDot].classList.add('dotVisible')
+    dots.forEach((dot, i) => {
+      if (i != currentDot) {
+        dot.classList.remove('dotVisible')
+      }
+    })
+  }
+}
+
+if (document.querySelector('body').offsetWidth < 650) {
+  reviewsContainer.style.left = 0
+  reviewsContainer.addEventListener('touchstart', swipeStart);
+}
+
 // footer
 const year = document.querySelector('#year')
 year.innerHTML = new Date().getFullYear()
+
+
+//header-slider
+
+const root = document.querySelector('.featuresTop')
+const features = document.querySelectorAll('.featureTop')
+const featureWidth = features[0].offsetWidth
+const featureMargin = 20
+const featureThreshold = featureWidth * .35
+let currentFeature = 1
+
+let ftInit, ftX1, ftX2
+
+const touchMove = () => {
+  const evt = getEvent()
+  let style = root.style.transform
+  const transform = +style.match(trfRegExp)[0]
+
+  ftX2 = ftX1 - evt.clientX
+  ftX1 = evt.clientX
+
+  root.style.transform = `translateX(${transform - ftX2}px)`
+}
+
+const touchEnd = () => {
+  const ftFinal = ftInit - ftX1;
+
+  document.removeEventListener('touchmove', touchMove);
+
+  if (Math.abs(ftFinal) > featureThreshold) {
+    if (ftInit < ftX1 && currentFeature != 0) {
+      currentFeature--
+    } else if (ftInit > ftX1 && currentFeature < features.length - 1) {
+      currentFeature++
+    }
+  }
+
+  if (ftInit !== posX1) {
+    root.style.transition = '200ms ease-in-out transform'
+    root.style.transform = `translateX(-${currentFeature * (featureWidth + featureMargin)}px)`
+  }
+}
+
+if (document.querySelector('body').offsetWidth < 1240) {
+  root.style.transform = `translateX(${-(featureWidth + featureMargin)}px)`
+  root.addEventListener('touchstart', () => {
+    const evt = getEvent()
+    ftInit = ftX1 = evt.clientX
+    root.style.transition = ''
+  
+    document.addEventListener('touchmove', touchMove)
+    document.addEventListener('touchend', touchEnd)
+  })
+
+  root.addEventListener('transitionend', () => {
+    if (features[currentFeature].classList.contains('firstFeature')) {
+      root.style.transition = 'none'
+      currentFeature = features.length - 2
+      root.style.transform = `translateX(-${currentFeature * (featureWidth + featureMargin)}px)`
+    }
+
+    if (features[currentFeature].classList.contains('lastFeature')) {
+      root.style.transition = 'none'
+      currentFeature = 1
+      root.style.transform = `translateX(-${currentFeature * (featureWidth + featureMargin)}px)`
+    }
+  })
+}
+
 
 
 
